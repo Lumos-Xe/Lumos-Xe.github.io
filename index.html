@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>嘿！别走丫٩(๛ ˘ ³˘)۶❤</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 确保Font Awesome链接正确 -->
+    
+    <!-- 使用多个CDN源确保Font Awesome加载 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- 备用CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" media="none" onload="this.media='all'">
+    
     <script>
         tailwind.config = {
             theme: {
@@ -53,7 +57,6 @@
                 transform: translateY(-5px);
                 box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
             }
-            /* 确保图标颜色正确应用 */
             .icon-primary {
                 color: #FB7299 !important;
             }
@@ -73,6 +76,30 @@
                 transform: translateY(0);
                 opacity: 1;
             }
+        }
+
+        /* 确保Font Awesome字体正确加载 */
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot');
+            src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+                 url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2') format('woff2'),
+                 url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.woff') format('woff'),
+                 url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        .fa {
+            font-family: 'FontAwesome' !important;
+            speak: none;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         @media (max-width: 640px) {
@@ -154,7 +181,6 @@
         <!-- 每日美句区域 -->
         <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 0.5s;">
             <h2 class="text-lg md:text-2xl text-white mb-3 flex items-center">
-                <!-- 添加专用图标类确保颜色显示 -->
                 <i class="fa fa-quote-left mr-2 icon-primary"></i>每日美句
             </h2>
             <p id="daily-quote" class="text-gray-100 text-base md:text-xl italic min-h-[50px]"></p>
@@ -228,9 +254,50 @@
     </footer>
 
     <script>
-        // 页面加载完成后检查并初始化图标
+        // 手动加载Font Awesome的备用方案
+        function loadFontAwesome() {
+            return new Promise((resolve, reject) => {
+                // 检查是否已加载
+                if (typeof FontAwesomeConfig !== 'undefined') {
+                    resolve();
+                    return;
+                }
+                
+                // 创建备用脚本加载
+                const script = document.createElement('script');
+                script.src = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/js/font-awesome.min.js';
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            // 更新时间显示
+            // 尝试加载Font Awesome并处理图标
+            loadFontAwesome().then(() => {
+                console.log('Font Awesome加载成功');
+                initIcons();
+            }).catch(() => {
+                console.log('主CDN加载失败，使用备用方案');
+                initIcons();
+            });
+
+            function initIcons() {
+                // 强制刷新图标显示
+                document.querySelectorAll('.fa').forEach(icon => {
+                    icon.style.display = 'none';
+                    setTimeout(() => {
+                        icon.style.display = 'inline-block';
+                        icon.style.opacity = '0';
+                        setTimeout(() => {
+                            icon.style.transition = 'opacity 0.5s ease';
+                            icon.style.opacity = '1';
+                        }, 50);
+                    }, 100);
+                });
+            }
+
+            // 时间更新函数
             function updateTime() {
                 const now = new Date();
                 
@@ -250,7 +317,7 @@
             updateTime();
             setInterval(updateTime, 1000);
             
-            // 获取每日美句
+            // 每日美句函数
             function getDailyQuote() {
                 const quoteElement = document.getElementById('daily-quote');
                 const authorElement = document.getElementById('quote-author');
@@ -286,7 +353,7 @@
             
             getDailyQuote();
             
-            // 更换背景
+            // 更换背景函数
             const backgroundIds = [1015, 1018, 1022, 1039, 1043, 1047, 1059];
             let currentBgIndex = 0;
             
@@ -311,7 +378,7 @@
             
             document.getElementById('change-bg').addEventListener('click', changeBackground);
             
-            // 每日美句刷新
+            // 美句刷新功能
             document.getElementById('daily-quote').addEventListener('click', function() {
                 this.style.transform = "scale(0.95)";
                 setTimeout(() => {
@@ -319,22 +386,6 @@
                     getDailyQuote();
                 }, 200);
             });
-
-            // 检查并确保Font Awesome图标已加载
-            const checkIcons = setInterval(() => {
-                const icon = document.querySelector('.fa');
-                if (icon && window.getComputedStyle(icon).display !== 'none') {
-                    clearInterval(checkIcons);
-                    // 图标已加载，添加淡入效果
-                    document.querySelectorAll('.fa').forEach(icon => {
-                        icon.style.opacity = '0';
-                        icon.style.transition = 'opacity 0.5s ease';
-                        setTimeout(() => {
-                            icon.style.opacity = '1';
-                        }, 100);
-                    });
-                }
-            }, 100);
         });
     </script>
 </body>
