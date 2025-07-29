@@ -1,384 +1,229 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>嘿！别走丫٩(๛ ˘ ³˘)۶❤</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+&#x3C;div class=&#x22;relative z-10 container mx-auto px-4 py-8 md:py-20&#x22;&#x3E;
+    &#x3C;header class=&#x22;text-center mb-8 fade-in&#x22; style=&#x22;animation-delay: 0.1s;&#x22;&#x3E;
+        &#x3C;h1 class=&#x22;text-[clamp(1.5rem,5vw,3.5rem)] font-bold text-white mb-3 text-shadow&#x22;&#x3E;
+            &#x6B22;&#x8FCE;&#x6765;&#x5230; Lumos_&#x5149;&#x9699; &#x7684;&#x7F51;&#x7AD9;&#xFF01;
+        &#x3C;/h1&#x3E;
+        &#x3C;p class=&#x22;text-[clamp(0.9rem,2vw,1.25rem)] text-gray-100 max-w-2xl mx-auto&#x22;&#x3E;
+            &#x5DC5;&#x5CF0;&#x4EA7;&#x751F;&#x865A;&#x4F2A;&#x7684;&#x62E5;&#x62A4; &#x9EC4;&#x660F;&#x89C1;&#x8BC1;&#x8654;&#x8BDA;&#x7684;&#x4FE1;&#x5F92;
+        &#x3C;/p&#x3E;
+    &#x3C;/header&#x3E;
+
+    &#x3C;div class=&#x22;bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-md mx-auto text-center slide-up&#x22; style=&#x22;animation-delay: 0.3s;&#x22;&#x3E;
+        &#x3C;p class=&#x22;text-gray-100 mb-2 text-sm md:text-base&#x22;&#x3E;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x3C;/p&#x3E;
+        &#x3C;div id=&#x22;time-display&#x22; class=&#x22;text-[clamp(1.2rem,5vw,2.5rem)] font-mono font-bold text-white&#x22;&#x3E;&#x3C;/div&#x3E;
+        &#x3C;div id=&#x22;date-display&#x22; class=&#x22;text-gray-200 mt-2 text-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up&#x22; style=&#x22;animation-delay: 0.5s;&#x22;&#x3E;
+        &#x3C;h2 class=&#x22;text-lg md:text-2xl text-white mb-3 flex items-center&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-quote-left mr-2 icon-primary&#x22;&#x3E;&#x3C;/i&#x3E;&#x6BCF;&#x65E5;&#x7F8E;&#x53E5;
+        &#x3C;/h2&#x3E;
+        &#x3C;p id=&#x22;daily-quote&#x22; class=&#x22;text-gray-100 text-base md:text-xl italic min-h-[50px]&#x22;&#x3E;&#x3C;/p&#x3E;
+        &#x3C;p id=&#x22;quote-author&#x22; class=&#x22;text-right mt-3 text-gray-300 text-sm&#x22;&#x3E;&#x3C;/p&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up&#x22; style=&#x22;animation-delay: 1.1s;&#x22;&#x3E;
+        &#x3C;h2 class=&#x22;text-lg md:text-2xl text-white mb-4 flex items-center&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-user-circle mr-2 icon-primary&#x22;&#x3E;&#x3C;/i&#x3E;&#x5173;&#x4E8E;&#x6211;
+        &#x3C;/h2&#x3E;
+        &#x3C;div class=&#x22;flex flex-col md:flex-row gap-6 items-center&#x22;&#x3E;
+            &#x3C;div class=&#x22;w-24 h-24 rounded-full overflow-hidden border-2 border-primary flex-shrink-0&#x22;&#x3E;
+                &#x3C;img src=&#x22;https://youke1.picui.cn/s1/2025/07/28/6887368d61b25.png&#x22; alt=&#x22;Lumos_&#x5149;&#x9699;&#x7684;&#x5934;&#x50CF;&#x22; class=&#x22;w-full h-full object-cover&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;text-gray-100&#x22;&#x3E;
+                &#x3C;p class=&#x22;mb-2&#x22;&#x3E;Hello everybody&#xFF01;&#x6211;&#x662F;Lumos_&#x5149;&#x9699;&#xFF0C;&#x4E00;&#x4E2A;MC&#x8F6C;CODM&#x7684;&#x5C0F;UP&#x3002;&#x3C;/p&#x3E;
+                &#x3C;p&#x3E;&#x5728;B&#x7AD9;&#x4E3B;&#x8981;&#x5206;&#x4EAB;CODM&#x89C6;&#x9891;&#xFF0C;&#x6B22;&#x8FCE;&#x5927;&#x5BB6;&#x5173;&#x6CE8;&#xFF01;&#x3C;/p&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up&#x22; style=&#x22;animation-delay: 1.3s;&#x22;&#x3E;
+        &#x3C;h2 class=&#x22;text-lg md:text-2xl text-white mb-4 flex items-center&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-star mr-2 icon-primary&#x22;&#x3E;&#x3C;/i&#x3E;&#x6211;&#x7684;&#x4F5C;&#x54C1;
+        &#x3C;/h2&#x3E;
+        &#x3C;div class=&#x22;grid grid-cols-1 md:grid-cols-2 gap-4&#x22;&#x3E;
+            &#x3C;div class=&#x22;bg-white/5 rounded-lg p-4 card-hover&#x22;&#x3E;
+                &#x3C;h3 class=&#x22;text-white font-medium mb-2&#x22;&#x3E;CODM | AK47&#x4F20;&#x8BF4;&#x7EC8;&#x4E8E;&#x51FA;&#x4E86; &#x5C1D;&#x5C1D;&#x9C9C;(doge&#x3C;/h3&#x3E;
+                &#x3C;p class=&#x22;text-gray-200 text-sm mb-3&#x22;&#x3E;&#x8FD9;&#x662F;&#x6211;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F5C;&#x54C1;&#xFF0C;AK&#x788E;&#x7247;&#x7EC8;&#x4E8E;&#x96C6;&#x9F50;&#x4E86;&#x3C;/p&#x3E;
+                &#x3C;a href=&#x22;https://www.bilibili.com/video/BV1EL3JzPEbH/?share_source=copy_web&#x26;vd_source=ccb545bd584c5d95f630921f2d0104db&#x22; target=&#x22;_blank&#x22; rel=&#x22;noopener noreferrer&#x22; 
+                   class=&#x22;text-primary hover:text-primary/80 text-sm flex items-center transition-colors&#x22;&#x3E;
+                    &#x3C;i class=&#x22;fa fa-link mr-1 icon-primary&#x22;&#x3E;&#x3C;/i&#x3E; &#x67E5;&#x770B;&#x8BE6;&#x60C5;
+                &#x3C;/a&#x3E;
+            &#x3C;/div&#x3E;
+
+            &#x3C;div class=&#x22;bg-white/5 rounded-lg p-4 card-hover&#x22;&#x3E;
+                &#x3C;h3 class=&#x22;text-white font-medium mb-2&#x22;&#x3E;&#x8FD8;&#x662F;Q&#x9178;&#x9178;&#x1F605;&#x3C;/h3&#x3E;
+                &#x3C;p class=&#x22;text-gray-200 text-sm mb-3&#x22;&#x3E;&#x72D9;&#x51FB;&#x7247;&#x6BB5;&#x3C;/p&#x3E;
+                &#x3C;a href=&#x22;https://www.bilibili.com/video/BV1QS8wzQEQ1/?share_source=copy_web&#x26;vd_source=ccb545bd584c5d95f630921f2d0104db&#x22; target=&#x22;_blank&#x22; rel=&#x22;noopener noreferrer&#x22;
+                   class=&#x22;text-primary hover:text-primary/80 text-sm flex items-center transition-colors&#x22;&#x3E;
+                    &#x3C;i class=&#x22;fa fa-link mr-1 icon-primary&#x22;&#x3E;&#x3C;/i&#x3E; &#x67E5;&#x770B;&#x8BE6;&#x60C5;
+                &#x3C;/a&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;bg-white/10 bg-blur rounded-xl p-4 md:p-6 mb-6 max-w-2xl mx-auto slide-up&#x22; style=&#x22;animation-delay: 0.9s;&#x22;&#x3E;
+        &#x3C;h3 class=&#x22;text-white mb-3 text-center&#x22;&#x3E;&#x9009;&#x62E9;&#x80CC;&#x666F;&#x5206;&#x7C7B;&#x3C;/h3&#x3E;
+        &#x3C;div class=&#x22;category-selector&#x22; id=&#x22;category-selector&#x22;&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;text-center mt-2&#x22;&#x3E;
+            &#x3C;button id=&#x22;change-bg&#x22; class=&#x22;px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all w-full md:w-auto touch-friendly btn-ripple&#x22;&#x3E;
+                &#x3C;i class=&#x22;fa fa-refresh mr-1 icon-primary&#x22;&#x3E;&#x3C;/i&#x3E; &#x968F;&#x673A;&#x66F4;&#x6362;&#x80CC;&#x666F;
+            &#x3C;/button&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+
+    &#x3C;div class=&#x22;text-center mb-4 slide-up&#x22; style=&#x22;animation-delay: 0.7s;&#x22;&#x3E;
+        &#x3C;a href=&#x22;https://space.bilibili.com/3546594985117916&#x22; target=&#x22;_blank&#x22; rel=&#x22;noopener noreferrer&#x22;
+           class=&#x22;inline-flex items-center justify-center px-5 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg w-full md:w-auto touch-friendly btn-ripple&#x22;&#x3E;
+            &#x3C;i class=&#x22;fa fa-play-circle mr-2&#x22;&#x3E;&#x3C;/i&#x3E;
+            &#x8BBF;&#x95EE;Lumos_&#x5149;&#x9699;&#x7684;B&#x7AD9;&#x7A7A;&#x95F4;
+        &#x3C;/a&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;footer class=&#x22;relative z-10 text-center text-gray-300 py-4 text-sm fade-in&#x22; style=&#x22;animation-delay: 1.5s;&#x22;&#x3E;
+    &#x3C;p&#x3E;&#xA9; &#x3C;span id=&#x22;current-year&#x22;&#x3E;&#x3C;/span&#x3E; &#x6211;&#x7684;&#x4E2A;&#x4EBA;&#x7F51;&#x7AD9; | &#x6258;&#x7BA1;&#x4E8E;GitHub Pages | &#x3C;span class=&#x22;text-primary&#x22;&#x3E;&#x7531;&#x8C46;&#x5305;&#x8F85;&#x52A9;&#x642D;&#x5EFA;&#x3C;/span&#x3E;&#x3C;/p&#x3E;
+&#x3C;/footer&#x3E;
+
+&#x3C;script&#x3E;
+    const bgCategories = [
+        { name: &#x22;&#x4E8C;&#x6B21;&#x5143;&#x22;, value: &#x22;anime&#x22; },
+        { name: &#x22;&#x81EA;&#x7136;&#x98CE;&#x666F;&#x22;, value: &#x22;nature&#x22; },
+        { name: &#x22;&#x57CE;&#x5E02;&#x5EFA;&#x7B51;&#x22;, value: &#x22;city&#x22; },
+        { name: &#x22;&#x62BD;&#x8C61;&#x827A;&#x672F;&#x22;, value: &#x22;abstract&#x22; },
+        { name: &#x22;&#x592A;&#x7A7A;&#x5B87;&#x5B99;&#x22;, value: &#x22;space&#x22; },
+        { name: &#x22;&#x5C71;&#x6C34;&#x98CE;&#x666F;&#x22;, value: &#x22;mountains&#x22; },
+        { name: &#x22;&#x6D77;&#x6D0B;&#x22;, value: &#x22;ocean&#x22; },
+        { name: &#x22;&#x68EE;&#x6797;&#x22;, value: &#x22;forest&#x22; },
+        { name: &#x22;&#x968F;&#x673A;&#x22;, value: &#x22;&#x22; }
+    ];
     
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FB7299',
-                        secondary: '#23ADE5',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .bg-blur {
-                backdrop-filter: blur(8px);
-            }
-            .touch-friendly {
-                min-height: 44px;
-                min-width: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .fade-in {
-                animation: fadeIn 0.8s ease forwards;
-                opacity: 0;
-            }
-            .slide-up {
-                animation: slideUp 0.6s ease forwards;
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            .card-hover {
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-            }
-            .icon-primary {
-                color: #FB7299 !important;
-            }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    let currentCategory = &#x22;anime&#x22;;
+    
+    function initCategorySelector() {
+        const selector = document.getElementById(&#x27;category-selector&#x27;);
+        selector.innerHTML = &#x22;&#x22;;
         
-        @keyframes slideUp {
-            from { 
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to { 
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .category-selector {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .category-tag {
-            padding: 4px 12px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            color: white;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .category-tag:hover, .category-tag.active {
-            background-color: rgba(251, 114, 153, 0.7);
-            border-color: rgba(251, 114, 153, 0.9);
-        }
-
-        .bg-image {
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .btn-ripple {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-ripple:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-            background-repeat: no-repeat;
-            background-position: 50%;
-            transform: scale(10, 10);
-            opacity: 0;
-            transition: transform 0.5s, opacity 0.8s;
-        }
-        
-        .btn-ripple:active:after {
-            transform: scale(0, 0);
-            opacity: 0.3;
-            transition: 0s;
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding-left: 0.75rem !important;
-                padding-right: 0.75rem !important;
-            }
-            .fade-in {
-                animation-duration: 0.6s;
-            }
-            .slide-up {
-                animation-duration: 0.5s;
-            }
-        }
-    </style>
-</head>
-<body class="min-h-screen">
-    <div class="fixed inset-0 z-0">
-        <img src="" alt="背景图" class="w-full h-full object-cover opacity-70 bg-image">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50"></div>
-    </div>
-
-    <div class="relative z-10 container mx-auto px-4 py-8 md:py-20">
-        <header class="text-center mb-8 fade-in" style="animation-delay: 0.1s;">
-            <h1 class="text-[clamp(1.5rem,5vw,3.5rem)] font-bold text-white mb-3 text-shadow">
-                欢迎来到 Lumos_光隙 的网站！
-            </h1>
-            <p class="text-[clamp(0.9rem,2vw,1.25rem)] text-gray-100 max-w-2xl mx-auto">
-                巅峰产生虚伪的拥护 黄昏见证虔诚的信徒
-            </p>
-        </header>
-
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-md mx-auto text-center slide-up" style="animation-delay: 0.3s;">
-            <p class="text-gray-100 mb-2 text-sm md:text-base">当前时间</p>
-            <div id="time-display" class="text-[clamp(1.2rem,5vw,2.5rem)] font-mono font-bold text-white"></div>
-            <div id="date-display" class="text-gray-200 mt-2 text-sm"></div>
-        </div>
-
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 0.5s;">
-            <h2 class="text-lg md:text-2xl text-white mb-3 flex items-center">
-                <i class="fa fa-quote-left mr-2 icon-primary"></i>每日美句
-            </h2>
-            <p id="daily-quote" class="text-gray-100 text-base md:text-xl italic min-h-[50px]"></p>
-            <p id="quote-author" class="text-right mt-3 text-gray-300 text-sm"></p>
-        </div>
-
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 1.1s;">
-            <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
-                <i class="fa fa-user-circle mr-2 icon-primary"></i>关于我
-            </h2>
-            <div class="flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary flex-shrink-0">
-                    <img src="https://youke1.picui.cn/s1/2025/07/28/6887368d61b25.png" alt="Lumos_光隙的头像" class="w-full h-full object-cover">
-                </div>
-                <div class="text-gray-100">
-                    <p class="mb-2">Hello everybody！我是Lumos_光隙，一个MC转CODM的小UP。</p>
-                    <p>在B站主要分享CODM视频，欢迎大家关注！</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up" style="animation-delay: 1.3s;">
-            <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
-                <i class="fa fa-star mr-2 icon-primary"></i>我的作品
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white/5 rounded-lg p-4 card-hover">
-                    <h3 class="text-white font-medium mb-2">CODM | AK47传说终于出了 尝尝鲜(doge</h3>
-                    <p class="text-gray-200 text-sm mb-3">这是我的第一个作品，AK碎片终于集齐了</p>
-                    <a href="https://www.bilibili.com/video/BV1EL3JzPEbH/?share_source=copy_web&vd_source=ccb545bd584c5d95f630921f2d0104db" target="_blank" rel="noopener noreferrer" 
-                       class="text-primary hover:text-primary/80 text-sm flex items-center transition-colors">
-                        <i class="fa fa-link mr-1 icon-primary"></i> 查看详情
-                    </a>
-                </div>
-                
-                <div class="bg-white/5 rounded-lg p-4 card-hover">
-                    <h3 class="text-white font-medium mb-2">还是Q酸酸😅</h3>
-                    <p class="text-gray-200 text-sm mb-3">狙击片段</p>
-                    <a href="https://www.bilibili.com/video/BV1QS8wzQEQ1/?share_source=copy_web&vd_source=ccb545bd584c5d95f630921f2d0104db" target="_blank" rel="noopener noreferrer"
-                       class="text-primary hover:text-primary/80 text-sm flex items-center transition-colors">
-                        <i class="fa fa-link mr-1 icon-primary"></i> 查看详情
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-6 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 0.9s;">
-            <h3 class="text-white mb-3 text-center">选择背景分类</h3>
-            <div class="category-selector" id="category-selector">
-            </div>
-            <div class="text-center mt-2">
-                <button id="change-bg" class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all w-full md:w-auto touch-friendly btn-ripple">
-                    <i class="fa fa-refresh mr-1 icon-primary"></i> 随机更换背景
-                </button>
-            </div>
-        </div>
-
-        <div class="text-center mb-4 slide-up" style="animation-delay: 0.7s;">
-            <a href="https://space.bilibili.com/3546594985117916" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center px-5 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg w-full md:w-auto touch-friendly btn-ripple">
-                <i class="fa fa-play-circle mr-2"></i>
-                访问Lumos_光隙的B站空间
-            </a>
-        </div>
-    </div>
-
-    <footer class="relative z-10 text-center text-gray-300 py-4 text-sm fade-in" style="animation-delay: 1.5s;">
-        <p>© <span id="current-year"></span> Lumos_光隙 的个人网站 | 托管于GitHub Pages</p>
-    </footer>
-
-    <script>
-        const bgCategories = [
-            { name: "二次元", value: "anime" },
-            { name: "自然风景", value: "nature" },
-            { name: "城市建筑", value: "city" },
-            { name: "抽象艺术", value: "abstract" },
-            { name: "太空宇宙", value: "space" },
-            { name: "山水风景", value: "mountains" },
-            { name: "海洋", value: "ocean" },
-            { name: "森林", value: "forest" },
-            { name: "随机", value: "" }
-        ];
-        
-        let currentCategory = "anime";
-        
-        function initCategorySelector() {
-            const selector = document.getElementById('category-selector');
-            selector.innerHTML = "";
+        bgCategories.forEach(category =&#x3E; {
+            const tag = document.createElement(&#x27;div&#x27;);
+            tag.className = &#x60;category-tag ${category.value === currentCategory ? &#x27;active&#x27; : &#x27;&#x27;}&#x60;;
+            tag.textContent = category.name;
+            tag.dataset.category = category.value;
             
-            bgCategories.forEach(category => {
-                const tag = document.createElement('div');
-                tag.className = `category-tag ${category.value === currentCategory ? 'active' : ''}`;
-                tag.textContent = category.name;
-                tag.dataset.category = category.value;
-                
-                tag.addEventListener('click', () => {
-                    document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
-                    tag.classList.add('active');
-                    currentCategory = category.value;
-                    changeBackground();
-                });
-                
-                selector.appendChild(tag);
+            tag.addEventListener(&#x27;click&#x27;, () =&#x3E; {
+                document.querySelectorAll(&#x27;.category-tag&#x27;).forEach(t =&#x3E; t.classList.remove(&#x27;active&#x27;));
+                tag.classList.add(&#x27;active&#x27;);
+                currentCategory = category.value;
+                changeBackground();
             });
-        }
-        
-        function getRandomBackground(category = "") {
-            if (category === "anime") {
-                return `https://picsum.photos/seed/anime${Math.random()}/1920/1080`;
-            } else {
-                const baseUrl = "https://source.unsplash.com/random/1920x1080";
-                return category ? `${baseUrl}?${category}` : baseUrl;
-            }
-        }
-        
-        function changeBackground() {
-            const bgImage = document.querySelector('.bg-image');
-            bgImage.style.opacity = '0.4';
             
-            const newImageUrl = getRandomBackground(currentCategory);
-            const newImg = new Image();
-            newImg.src = newImageUrl;
-            
-            newImg.onload = function() {
-                bgImage.src = newImageUrl;
-                bgImage.alt = currentCategory ? 
-                    `${bgCategories.find(c => c.value === currentCategory)?.name}背景图` : 
-                    "随机背景图";
-                setTimeout(() => {
-                    bgImage.style.opacity = '0.7';
-                }, 50);
-            }
-            
-            newImg.onerror = function() {
-                console.error('背景图加载失败，使用备用图');
-                bgImage.src = `https://picsum.photos/seed/animedefault/1920/1080`;
-                setTimeout(() => {
-                    bgImage.style.opacity = '0.7';
-                }, 50);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            initCategorySelector();
-            changeBackground();
-            
-            document.getElementById('change-bg').addEventListener('click', changeBackground);
-            
-            function updateTime() {
-                const now = new Date();
-                
-                const timeDisplay = document.getElementById('time-display');
-                const hours = String(now.getHours()).padStart(2, '0');
-                const minutes = String(now.getMinutes()).padStart(2, '0');
-                const seconds = String(now.getSeconds()).padStart(2, '0');
-                timeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
-                
-                const dateDisplay = document.getElementById('date-display');
-                const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
-                dateDisplay.textContent = now.toLocaleDateString('zh-CN', options);
-                
-                document.getElementById('current-year').textContent = now.getFullYear();
-            }
-            
-            updateTime();
-            setInterval(updateTime, 1000);
-            
-            function getDailyQuote() {
-                const quoteElement = document.getElementById('daily-quote');
-                const authorElement = document.getElementById('quote-author');
-                
-                quoteElement.textContent = "加载中...";
-                authorElement.textContent = "";
-                
-                fetch('https://v1.hitokoto.cn/')
-                    .then(response => response.json())
-                    .then(data => {
-                        quoteElement.style.opacity = "0";
-                        authorElement.style.opacity = "0";
-                        
-                        setTimeout(() => {
-                            quoteElement.textContent = data.hitokoto;
-                            authorElement.textContent = data.from ? `—— ${data.from}` : '';
-                            
-                            quoteElement.offsetHeight;
-                            quoteElement.style.transition = "opacity 0.5s ease";
-                            quoteElement.style.opacity = "1";
-                            
-                            authorElement.offsetHeight;
-                            authorElement.style.transition = "opacity 0.5s ease";
-                            authorElement.style.opacity = "1";
-                        }, 300);
-                    })
-                    .catch(error => {
-                        console.error('获取美句失败:', error);
-                        quoteElement.textContent = '生活就像海洋，只有意志坚强的人才能到达彼岸。';
-                        authorElement.textContent = '—— 马克思';
-                    });
-            }
-            
-            getDailyQuote();
-            
-            document.getElementById('daily-quote').addEventListener('click', function() {
-                this.style.transform = "scale(0.95)";
-                setTimeout(() => {
-                    this.style.transform = "scale(1)";
-                    getDailyQuote();
-                }, 200);
-            });
+            selector.appendChild(tag);
         });
-    </script>
-</body>
-</html>
+    }
     
+    function getRandomBackground(category = &#x22;&#x22;) {
+        if (category === &#x22;anime&#x22;) {
+            return &#x60;https://picsum.photos/seed/anime${Math.random()}/1920/1080&#x60;;
+        } else {
+            const baseUrl = &#x22;https://source.unsplash.com/random/1920x1080&#x22;;
+            return category ? &#x60;${baseUrl}?${category}&#x60; : baseUrl;
+        }
+    }
+    
+    function changeBackground() {
+        const bgImage = document.querySelector(&#x27;.bg-image&#x27;);
+        bgImage.style.opacity = &#x27;0.4&#x27;;
+        
+        const newImageUrl = getRandomBackground(currentCategory);
+        const newImg = new Image();
+        newImg.src = newImageUrl;
+        
+        newImg.onload = function() {
+            bgImage.src = newImageUrl;
+            bgImage.alt = currentCategory ? 
+                &#x60;${bgCategories.find(c =&#x3E; c.value === currentCategory)?.name}&#x80CC;&#x666F;&#x56FE;&#x60; : 
+                &#x22;&#x968F;&#x673A;&#x80CC;&#x666F;&#x56FE;&#x22;;
+            setTimeout(() =&#x3E; {
+                bgImage.style.opacity = &#x27;0.7&#x27;;
+            }, 50);
+        }
+        
+        newImg.onerror = function() {
+            console.error(&#x27;&#x80CC;&#x666F;&#x56FE;&#x52A0;&#x8F7D;&#x5931;&#x8D25;&#xFF0C;&#x4F7F;&#x7528;&#x5907;&#x7528;&#x56FE;&#x27;);
+            bgImage.src = &#x60;https://picsum.photos/seed/animedefault/1920/1080&#x60;;
+            setTimeout(() =&#x3E; {
+                bgImage.style.opacity = &#x27;0.7&#x27;;
+            }, 50);
+        }
+    }
+
+    document.addEventListener(&#x27;DOMContentLoaded&#x27;, function() {
+        initCategorySelector();
+        changeBackground();
+        
+        document.getElementById(&#x27;change-bg&#x27;).addEventListener(&#x27;click&#x27;, changeBackground);
+        
+        function updateTime() {
+            const now = new Date();
+            
+            const timeDisplay = document.getElementById(&#x27;time-display&#x27;);
+            const hours = String(now.getHours()).padStart(2, &#x27;0&#x27;);
+            const minutes = String(now.getMinutes()).padStart(2, &#x27;0&#x27;);
+            const seconds = String(now.getSeconds()).padStart(2, &#x27;0&#x27;);
+            timeDisplay.textContent = &#x60;${hours}:${minutes}:${seconds}&#x60;;
+            
+            const dateDisplay = document.getElementById(&#x27;date-display&#x27;);
+            const options = { year: &#x27;numeric&#x27;, month: &#x27;long&#x27;, day: &#x27;numeric&#x27;, weekday: &#x27;long&#x27; };
+            dateDisplay.textContent = now.toLocaleDateString(&#x27;zh-CN&#x27;, options);
+            
+            document.getElementById(&#x27;current-year&#x27;).textContent = now.getFullYear();
+        }
+        
+        updateTime();
+        setInterval(updateTime, 1000);
+        
+        function getDailyQuote() {
+            const quoteElement = document.getElementById(&#x27;daily-quote&#x27;);
+            const authorElement = document.getElementById(&#x27;quote-author&#x27;);
+            
+            quoteElement.textContent = &#x22;&#x52A0;&#x8F7D;&#x4E2D;...&#x22;;
+            authorElement.textContent = &#x22;&#x22;;
+            
+            fetch(&#x27;https://v1.hitokoto.cn/&#x27;)
+                .then(response =&#x3E; response.json())
+                .then(data =&#x3E; {
+                    quoteElement.style.opacity = &#x22;0&#x22;;
+                    authorElement.style.opacity = &#x22;0&#x22;;
+                    
+                    setTimeout(() =&#x3E; {
+                        quoteElement.textContent = data.hitokoto;
+                        authorElement.textContent = data.from ? &#x60;&#x2014;&#x2014; ${data.from}&#x60; : &#x27;&#x27;;
+                        
+                        quoteElement.offsetHeight;
+                        quoteElement.style.transition = &#x22;opacity 0.5s ease&#x22;;
+                        quoteElement.style.opacity = &#x22;1&#x22;;
+                        
+                        authorElement.offsetHeight;
+                        authorElement.style.transition = &#x22;opacity 0.5s ease&#x22;;
+                        authorElement.style.opacity = &#x22;1&#x22;;
+                    }, 300);
+                })
+                .catch(error =&#x3E; {
+                    console.error(&#x27;&#x83B7;&#x53D6;&#x7F8E;&#x53E5;&#x5931;&#x8D25;:&#x27;, error);
+                    quoteElement.textContent = &#x27;&#x751F;&#x6D3B;&#x5C31;&#x50CF;&#x6D77;&#x6D0B;&#xFF0C;&#x53EA;&#x6709;&#x610F;&#x5FD7;&#x575A;&#x5F3A;&#x7684;&#x4EBA;&#x624D;&#x80FD;&#x5230;&#x8FBE;&#x5F7C;&#x5CB8;&#x3002;&#x27;;
+                    authorElement.textContent = &#x27;&#x2014;&#x2014; &#x9A6C;&#x514B;&#x601D;&#x27;;
+                });
+        }
+        
+        getDailyQuote();
+        
+        document.getElementById(&#x27;daily-quote&#x27;).addEventListener(&#x27;click&#x27;, function() {
+            this.style.transform = &#x22;scale(0.95)&#x22;;
+            setTimeout(() =&#x3E; {
+                this.style.transform = &#x22;scale(1)&#x22;;
+                getDailyQuote();
+            }, 200);
+        });
+    });
+&#x3C;/script&#x3E;
