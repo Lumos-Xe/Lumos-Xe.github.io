@@ -130,6 +130,45 @@
             transition: 0s;
         }
 
+        /* 友链样式 */
+        .friend-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .friend-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .friend-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid rgba(251, 114, 153, 0.5);
+        }
+        
+        .friend-info {
+            flex: 1;
+        }
+        
+        .friend-name {
+            font-weight: 500;
+            color: white;
+            margin-bottom: 2px;
+        }
+        
+        .friend-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
         @media (max-width: 640px) {
             .container {
                 padding-left: 0.75rem !important;
@@ -189,6 +228,16 @@
             </div>
         </div>
 
+        <!-- 新增的友链模块 -->
+        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up" style="animation-delay: 1.5s;">
+            <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
+                <i class="fa fa-link mr-2 icon-primary"></i>友情链接
+            </h2>
+            <div class="space-y-3" id="friend-links-container">
+                <!-- 友链内容将通过JS动态生成 -->
+            </div>
+        </div>
+
         <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up" style="animation-delay: 1.3s;">
             <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
                 <i class="fa fa-star mr-2 icon-primary"></i>我的作品
@@ -234,7 +283,7 @@
         </div>
     </div>
 
-    <footer class="relative z-10 text-center text-gray-300 py-4 text-sm fade-in" style="animation-delay: 1.5s;">
+    <footer class="relative z-10 text-center text-gray-300 py-4 text-sm fade-in" style="animation-delay: 1.7s;">
         <p>© <span id="current-year"></span> 我的个人网站 | 托管于GitHub Pages | <span class="text-primary">由豆包辅助搭建</span></p>
     </footer>
 
@@ -249,6 +298,16 @@
             { name: "海洋", value: "ocean" },
             { name: "森林", value: "forest" },
             { name: "随机", value: "" }
+        ];
+        
+        // 友链数据 - 你可以根据需要修改这些信息
+        const friendLinks = [
+            {
+                name: "FFZFC",
+                url: "https://ffzfc.github.io/",
+                avatar: "",
+                description: "折风的小站"
+                       }
         ];
         
         let currentCategory = "anime";
@@ -271,6 +330,34 @@
                 });
                 
                 selector.appendChild(tag);
+            });
+        }
+        
+        // 初始化友链
+        function initFriendLinks() {
+            const container = document.getElementById('friend-links-container');
+            container.innerHTML = "";
+            
+            friendLinks.forEach((link, index) => {
+                // 为每个友链添加延迟动画效果
+                setTimeout(() => {
+                    const linkElement = document.createElement('a');
+                    linkElement.href = link.url;
+                    linkElement.target = "_blank";
+                    linkElement.rel = "noopener noreferrer";
+                    linkElement.className = "friend-link slide-up";
+                    
+                    linkElement.innerHTML = `
+                        <img src="${link.avatar}" alt="${link.name}的头像" class="friend-avatar">
+                        <div class="friend-info">
+                            <div class="friend-name">${link.name}</div>
+                            <div class="friend-desc">${link.description}</div>
+                        </div>
+                        <i class="fa fa-arrow-right text-primary opacity-70"></i>
+                    `;
+                    
+                    container.appendChild(linkElement);
+                }, index * 100); // 每个友链延迟100ms出现，形成顺序动画
             });
         }
         
@@ -312,6 +399,7 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             initCategorySelector();
+            initFriendLinks(); // 初始化友链
             changeBackground();
             
             document.getElementById('change-bg').addEventListener('click', changeBackground);
@@ -381,4 +469,3 @@
     </script>
 </body>
 </html>
-    
