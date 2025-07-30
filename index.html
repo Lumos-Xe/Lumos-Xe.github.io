@@ -146,11 +146,14 @@
             transform: translateX(5px);
         }
         
-        .friend-avatar {
+        .friend-placeholder {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            object-fit: cover;
+            background-color: rgba(251, 114, 153, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border: 2px solid rgba(251, 114, 153, 0.5);
         }
         
@@ -228,7 +231,7 @@
             </div>
         </div>
 
-        <!-- 新增的友链模块 -->
+        <!-- 友情链接模块 -->
         <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up" style="animation-delay: 1.5s;">
             <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
                 <i class="fa fa-link mr-2 icon-primary"></i>友情链接
@@ -300,14 +303,13 @@
             { name: "随机", value: "" }
         ];
         
-        // 友链数据 - 你可以根据需要修改这些信息
+        // 友情链接数据 - 仅保留一个链接
         const friendLinks = [
             {
                 name: "FFZFC",
                 url: "https://ffzfc.github.io/",
-                avatar: "",
                 description: "折风的小站"
-                       }
+            }
         ];
         
         let currentCategory = "anime";
@@ -339,7 +341,7 @@
             container.innerHTML = "";
             
             friendLinks.forEach((link, index) => {
-                // 为每个友链添加延迟动画效果
+                // 为友链添加延迟动画效果
                 setTimeout(() => {
                     const linkElement = document.createElement('a');
                     linkElement.href = link.url;
@@ -347,8 +349,11 @@
                     linkElement.rel = "noopener noreferrer";
                     linkElement.className = "friend-link slide-up";
                     
+                    // 没有头像，使用图标占位
                     linkElement.innerHTML = `
-                        <img src="${link.avatar}" alt="${link.name}的头像" class="friend-avatar">
+                        <div class="friend-placeholder">
+                            <i class="fa fa-globe text-primary"></i>
+                        </div>
                         <div class="friend-info">
                             <div class="friend-name">${link.name}</div>
                             <div class="friend-desc">${link.description}</div>
@@ -357,7 +362,7 @@
                     `;
                     
                     container.appendChild(linkElement);
-                }, index * 100); // 每个友链延迟100ms出现，形成顺序动画
+                }, index * 100);
             });
         }
         
@@ -469,3 +474,4 @@
     </script>
 </body>
 </html>
+    
