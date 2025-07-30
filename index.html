@@ -146,14 +146,11 @@
             transform: translateX(5px);
         }
         
-        .friend-placeholder {
+        .friend-avatar {
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            background-color: rgba(251, 114, 153, 0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            object-fit: cover;
             border: 2px solid rgba(251, 114, 153, 0.5);
         }
         
@@ -303,11 +300,12 @@
             { name: "随机", value: "" }
         ];
         
-        // 友情链接数据 - 仅保留一个链接
+        // 友情链接数据 - 包含头像
         const friendLinks = [
             {
                 name: "FFZFC",
                 url: "https://ffzfc.github.io/",
+                avatar: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAJUJmiKJJp9-p_tdAEridFa_u6CE2Y0AAKTFgAC_JFRVNSr0GkkFbcAATYE.png",
                 description: "折风的小站"
             }
         ];
@@ -349,11 +347,9 @@
                     linkElement.rel = "noopener noreferrer";
                     linkElement.className = "friend-link slide-up";
                     
-                    // 没有头像，使用图标占位
+                    // 使用提供的头像链接
                     linkElement.innerHTML = `
-                        <div class="friend-placeholder">
-                            <i class="fa fa-globe text-primary"></i>
-                        </div>
+                        <img src="${link.avatar}" alt="${link.name}的头像" class="friend-avatar">
                         <div class="friend-info">
                             <div class="friend-name">${link.name}</div>
                             <div class="friend-desc">${link.description}</div>
@@ -474,4 +470,3 @@
     </script>
 </body>
 </html>
-    
