@@ -1,472 +1,246 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>嘿！别走丫٩(๛ ˘ ³˘)۶❤</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FB7299',
-                        secondary: '#23ADE5',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            .text-shadow {
-                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            }
-            .bg-blur {
-                backdrop-filter: blur(8px);
-            }
-            .touch-friendly {
-                min-height: 44px;
-                min-width: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            .fade-in {
-                animation: fadeIn 0.8s ease forwards;
-                opacity: 0;
-            }
-            .slide-up {
-                animation: slideUp 0.6s ease forwards;
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            .card-hover {
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-            }
-            .card-hover:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
-            }
-            .icon-primary {
-                color: #FB7299 !important;
-            }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slideUp {
-            from { 
-                transform: translateY(20px);
-                opacity: 0;
-            }
-            to { 
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .category-selector {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-        
-        .category-tag {
-            padding: 4px 12px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            color: white;
-            font-size: 0.85rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .category-tag:hover, .category-tag.active {
-            background-color: rgba(251, 114, 153, 0.7);
-            border-color: rgba(251, 114, 153, 0.9);
-        }
-
-        .bg-image {
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .btn-ripple {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .btn-ripple:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-            background-repeat: no-repeat;
-            background-position: 50%;
-            transform: scale(10, 10);
-            opacity: 0;
-            transition: transform 0.5s, opacity 0.8s;
-        }
-        
-        .btn-ripple:active:after {
-            transform: scale(0, 0);
-            opacity: 0.3;
-            transition: 0s;
-        }
-
-        /* 友链样式 */
-        .friend-link {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 0.75rem;
-            border-radius: 8px;
-            background-color: rgba(255, 255, 255, 0.05);
-            transition: all 0.3s ease;
-        }
-        
-        .friend-link:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateX(5px);
-        }
-        
-        .friend-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid rgba(251, 114, 153, 0.5);
-        }
-        
-        .friend-info {
-            flex: 1;
-        }
-        
-        .friend-name {
-            font-weight: 500;
-            color: white;
-            margin-bottom: 2px;
-        }
-        
-        .friend-desc {
-            font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        @media (max-width: 640px) {
-            .container {
-                padding-left: 0.75rem !important;
-                padding-right: 0.75rem !important;
-            }
-            .fade-in {
-                animation-duration: 0.6s;
-            }
-            .slide-up {
-                animation-duration: 0.5s;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>孙筱霏生日快乐🎂</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+    background: linear-gradient(150deg, #f8e6ff 0%, #e0f0ff 100%);
+    color:#2c2c44;
+    font-family:system-ui, sans-serif;
+    min-height:100vh;
+    text-align:center;
+    padding:6rem 1rem;
+    overflow-x:hidden;
+}
+.float-emo{
+    position:fixed;
+    font-size:28px;
+    opacity:0.55;
+    animation: float 7s infinite ease-in-out;
+    pointer-events:none;
+}
+@keyframes float{
+    0%{transform: translateY(0px) rotate(0deg);}
+    50%{transform: translateY(-22px) rotate(6deg);}
+    100%{transform: translateY(0px) rotate(0deg);}
+}
+.star{
+    position:fixed;
+    width:4px;height:4px;
+    background:#fff;
+    border-radius:50%;
+    opacity:0.5;
+    animation:twinkle 3.5s infinite alternate;
+}
+@keyframes twinkle{
+    from{opacity:0.15;transform:scale(0.6)}
+    to{opacity:0.8;transform:scale(1.4)}
+}
+.title{
+    font-size:46px;
+    color:#c04890;
+    text-shadow: 0 0 14px #ffb8dd77;
+    margin-bottom:12px;
+    letter-spacing:2px;
+}
+.sub{
+    font-size:16px;
+    color:#54547a;
+    margin-bottom:40px;
+    letter-spacing:1px;
+}
+.card{
+    max-width:600px;
+    margin:0 auto;
+    padding:48px 32px;
+    border:1px solid rgba(255,255,255,0.6);
+    border-radius:24px;
+    background: rgba(255, 255, 255, 0.32);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(130, 160, 220, 0.18);
+}
+.desc{
+    line-height:1.95;
+    font-size:17px;
+    margin:22px 0;
+}
+.opt-btn{
+    display:block;
+    width:82%;
+    margin:14px auto;
+    padding:15px;
+    border:none;
+    border-radius:999px;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.25s ease;
+}
+.btn1{background:rgba(84, 160, 255, 0.85);color:#fff;}
+.btn2{background:rgba(255, 126, 179, 0.85);color:#fff;}
+.btn3{background:rgba(123, 97, 255, 0.85);color:#fff;}
+.opt-btn:hover{
+    transform:scale(1.04);
+    box-shadow:0 4px 16px rgba(0,0,0,0.08);
+}
+#fireCanvas{
+    position:fixed;
+    top:0;left:0;
+    width:100vw;height:100vh;
+    pointer-events:none;
+    z-index:99;
+    background: transparent;
+}
+.pop{
+    position:fixed;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    background:rgba(255,255,255,0.4);
+    backdrop-filter: blur(14px);
+    border:1px solid rgba(255,255,255,0.7);
+    padding:38px;
+    border-radius:22px;
+    z-index:100;
+    display:none;
+    box-shadow:0 10px 40px rgba(100,120,180,0.15);
+}
+.pop p{font-size:18px;margin-bottom:22px;color:#2c2c44;line-height:1.8}
+.close{
+    padding:9px 24px;
+    border:none;
+    border-radius:999px;
+    background:rgba(255, 126, 179, 0.9);
+    color:white;
+    cursor:pointer;
+}
+</style>
 </head>
-<body class="min-h-screen">
-    <div class="fixed inset-0 z-0">
-        <img src="" alt="背景图" class="w-full h-full object-cover opacity-70 bg-image">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/50"></div>
-    </div>
+<body>
+<div class="float-emo" style="top:12%;left:7%;animation-delay:0s;">🧁</div>
+<div class="float-emo" style="top:26%;right:5%;animation-delay:1.2s;">🎀</div>
+<div class="float-emo" style="top:62%;left:4%;animation-delay:2.4s;">🫧</div>
+<div class="float-emo" style="top:76%;right:9%;animation-delay:3.6s;">🍬</div>
+<div class="float-emo" style="top:9%;right:14%;animation-delay:4.8s;">💫</div>
+<div class="float-emo" style="top:44%;left:2%;animation-delay:6s;">☁️</div>
 
-    <div class="relative z-10 container mx-auto px-4 py-8 md:py-20">
-        <header class="text-center mb-8 fade-in" style="animation-delay: 0.1s;">
-            <h1 class="text-[clamp(1.5rem,5vw,3.5rem)] font-bold text-white mb-3 text-shadow">
-                欢迎来到 Lumos_光隙 的网站！
-            </h1>
-            <p class="text-[clamp(0.9rem,2vw,1.25rem)] text-gray-100 max-w-2xl mx-auto">
-                巅峰产生虚伪的拥护 黄昏见证虔诚的信徒
-            </p>
-        </header>
+<canvas id="fireCanvas"></canvas>
+<div class="card">
+    <h1 class="title">🎆祝孙筱霏生日快乐🎂</h1>
+    <p class="sub">✨生辰：2011.06.18 | 专属赛博礼物💌</p>
+    <p class="desc">
+    没法线下见面送礼物🥺，搭了这个专属小网站送给我最好的朋友孙筱霏<br>
+    新一岁吃好喝好🍰奶茶管够🥤，烦恼全跑👋，好运常驻🌟，所有心愿通通落地🎁！
+    </p>
+    <button class="opt-btn btn1" onclick="launchFire()">🎇放烟花</button>
+    <button class="opt-btn btn2" onclick="randomWish()">🎁抽祝福</button>
+    <button class="opt-btn btn3" onclick="showWishBox()">🙏许心愿</button>
+    <button class="opt-btn" style="background:rgba(255, 193, 227, 0.75);color:#2c2c44;margin-top:28px" onclick="playBgm()">🎵播放音乐</button>
+    <div style="margin-top:32px;font-size:38px">🍧🧸🫐💐🪁🌷</div>
+</div>
 
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-md mx-auto text-center slide-up" style="animation-delay: 0.3s;">
-            <p class="text-gray-100 mb-2 text-sm md:text-base">当前时间</p>
-            <div id="time-display" class="text-[clamp(1.2rem,5vw,2.5rem)] font-mono font-bold text-white"></div>
-            <div id="date-display" class="text-gray-200 mt-2 text-sm"></div>
-        </div>
+<div class="pop" id="popBox">
+    <p id="popText"></p>
+    <button class="close" onclick="closePop()">关闭✖️</button>
+</div>
 
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 0.5s;">
-            <h2 class="text-lg md:text-2xl text-white mb-3 flex items-center">
-                <i class="fa fa-quote-left mr-2 icon-primary"></i>每日美句
-            </h2>
-            <p id="daily-quote" class="text-gray-100 text-base md:text-xl italic min-h-[50px]"></p>
-            <p id="quote-author" class="text-right mt-3 text-gray-300 text-sm"></p>
-        </div>
+<audio id="bgm" loop>
+    <source src="https://music.163.com/song/media/outer/url?id=2114134871.mp3">
 
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 1.1s;">
-            <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
-                <i class="fa fa-user-circle mr-2 icon-primary"></i>关于我
-            </h2>
-            <div class="flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-24 h-24 rounded-full overflow-hidden border-2 border-primary flex-shrink-0">
-                    <img src="https://youke1.picui.cn/s1/2025/07/28/6887368d61b25.png" alt="Lumos_光隙的头像" class="w-full h-full object-cover">
-                </div>
-                <div class="text-gray-100">
-                    <p class="mb-2">Hello everybody！我是Lumos_光隙，一个MC转CODM的小UP。</p>
-                    <p>在B站主要分享CODM视频，欢迎大家关注！</p>
-                </div>
-            </div>
-        </div>
+<script>
+function createStar(){
+    for(let i=0;i<130;i++){
+        let star = document.createElement('div');
+        star.className = 'star';
+        star.style.left = Math.random()*100+'%';
+        star.style.top = Math.random()*100+'%';
+        star.style.animationDelay = Math.random()*3.5+'s';
+        document.body.appendChild(star);
+    }
+}
+createStar();
 
-        <!-- 友情链接模块 -->
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up" style="animation-delay: 1.5s;">
-            <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
-                <i class="fa fa-link mr-2 icon-primary"></i>友情链接
-            </h2>
-            <div class="space-y-3" id="friend-links-container">
-                <!-- 友链内容将通过JS动态生成 -->
-            </div>
-        </div>
+function playBgm(){
+    document.getElementById('bgm').play();
+}
 
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-8 mb-6 max-w-4xl mx-auto slide-up" style="animation-delay: 1.3s;">
-            <h2 class="text-lg md:text-2xl text-white mb-4 flex items-center">
-                <i class="fa fa-star mr-2 icon-primary"></i>我的作品
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="bg-white/5 rounded-lg p-4 card-hover">
-                    <h3 class="text-white font-medium mb-2">CODM | AK47传说终于出了 尝尝鲜(doge</h3>
-                    <p class="text-gray-200 text-sm mb-3">这是我的第一个作品，AK碎片终于集齐了</p>
-                    <a href="https://www.bilibili.com/video/BV1EL3JzPEbH/?share_source=copy_web&vd_source=ccb545bd584c5d95f630921f2d0104db" target="_blank" rel="noopener noreferrer" 
-                       class="text-primary hover:text-primary/80 text-sm flex items-center transition-colors">
-                        <i class="fa fa-link mr-1 icon-primary"></i> 查看详情
-                    </a>
-                </div>
-                
-                <div class="bg-white/5 rounded-lg p-4 card-hover">
-                    <h3 class="text-white font-medium mb-2">还是Q酸酸😅</h3>
-                    <p class="text-gray-200 text-sm mb-3">狙击片段</p>
-                    <a href="https://www.bilibili.com/video/BV1QS8wzQEQ1/?share_source=copy_web&vd_source=ccb545bd584c5d95f630921f2d0104db" target="_blank" rel="noopener noreferrer"
-                       class="text-primary hover:text-primary/80 text-sm flex items-center transition-colors">
-                        <i class="fa fa-link mr-1 icon-primary"></i> 查看详情
-                    </a>
-                </div>
-            </div>
-        </div>
+const wishList = [
+    "🍔孙筱霏！新一岁狂吃不胖，零花钱暴涨💰，考试全超常发挥📝！",
+    "🥳祝我的好朋友筱霏：每天开心🥰，没有糟心事，游戏把把连胜🎮！",
+    "🌟2011.6.18出生的天才少女孙筱霏，岁岁无忧，万事顺意🍃！",
+    "✨筱霏专属buff生效：霉运清零，好运满格，想要的全都拥有🎁！",
+    "🥤远程投喂奶茶蛋糕！见面双倍补给，孙筱霏生日快乐🎂！",
+    "☁️新一岁自由自在，不用焦虑，永远做无忧无虑的小朋友🧸！",
+    "🪐赛博宇宙全部好运打包送给孙筱霏，今年暴富暴美！💎",
+    "🎀所有难过退退退！筱霏每天都有细碎的小幸福环绕🫧"
+];
 
-        <div class="bg-white/10 bg-blur rounded-xl p-4 md:p-6 mb-6 max-w-2xl mx-auto slide-up" style="animation-delay: 0.9s;">
-            <h3 class="text-white mb-3 text-center">选择背景分类</h3>
-            <div class="category-selector" id="category-selector">
-            </div>
-            <div class="text-center mt-2">
-                <button id="change-bg" class="px-4 py-2 bg-white/20 hover:bg-white/30 rounded-lg text-white transition-all w-full md:w-auto touch-friendly btn-ripple">
-                    <i class="fa fa-refresh mr-1 icon-primary"></i> 随机更换背景
-                </button>
-            </div>
-        </div>
+function randomWish(){
+    let text = wishList[Math.floor(Math.random()*wishList.length)];
+    document.getElementById('popText').innerText = text;
+    document.getElementById('popBox').style.display = 'block';
+}
+function showWishBox(){
+    document.getElementById('popText').innerText = "🌙对着屏幕许愿吧！赛博星空会替我记住孙筱霏所有愿望，一定会实现✨";
+    document.getElementById('popBox').style.display = 'block';
+}
+function closePop(){
+    document.getElementById('popBox').style.display = 'none';
+}
 
-        <div class="text-center mb-4 slide-up" style="animation-delay: 0.7s;">
-            <a href="https://space.bilibili.com/3546594985117916" target="_blank" rel="noopener noreferrer"
-               class="inline-flex items-center justify-center px-5 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg w-full md:w-auto touch-friendly btn-ripple">
-                <i class="fa fa-play-circle mr-2"></i>
-                访问Lumos_光隙的B站空间
-            </a>
-        </div>
-    </div>
+// 稳定烟花代码
+const canvas = document.getElementById('fireCanvas');
+const ctx = canvas.getContext('2d');
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
+window.addEventListener('resize',()=>{
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+});
 
-    <footer class="relative z-10 text-center text-gray-300 py-4 text-sm fade-in" style="animation-delay: 1.7s;">
-        <p>© <span id="current-year"></span> 我的个人网站 | 托管于GitHub Pages | <span class="text-primary">由豆包辅助搭建</span></p>
-    </footer>
+let fireArr = [];
+class Spark{
+    constructor(x,y,c){
+        this.x=x;this.y=y;
+        this.vx=(Math.random()-0.5)*6;
+        this.vy=(Math.random()-0.5)*6;
+        this.a=1;
+        this.color=c;
+    }
+    update(){
+        this.x+=this.vx;
+        this.y+=this.vy;
+        this.a-=0.02;
+    }
+    draw(){
+        ctx.save();
+        ctx.globalAlpha=this.a;
+        ctx.fillStyle=this.color;
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,2,0,Math.PI*2);
+        ctx.fill();
+        ctx.restore();
+    }
+}
 
-    <script>
-        const bgCategories = [
-            { name: "二次元", value: "anime" },
-            { name: "自然风景", value: "nature" },
-            { name: "城市建筑", value: "city" },
-            { name: "抽象艺术", value: "abstract" },
-            { name: "太空宇宙", value: "space" },
-            { name: "山水风景", value: "mountains" },
-            { name: "海洋", value: "ocean" },
-            { name: "森林", value: "forest" },
-            { name: "随机", value: "" }
-        ];
-        
-        // 友情链接数据 - 包含头像
-        const friendLinks = [
-            {
-                name: "FFZFC",
-                url: "https://ffzfc.github.io/",
-                avatar: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAJUJmiKJJp9-p_tdAEridFa_u6CE2Y0AAKTFgAC_JFRVNSr0GkkFbcAATYE.png",
-                description: "折风的小站"
-            }
-        ];
-        
-        let currentCategory = "anime";
-        
-        function initCategorySelector() {
-            const selector = document.getElementById('category-selector');
-            selector.innerHTML = "";
-            
-            bgCategories.forEach(category => {
-                const tag = document.createElement('div');
-                tag.className = `category-tag ${category.value === currentCategory ? 'active' : ''}`;
-                tag.textContent = category.name;
-                tag.dataset.category = category.value;
-                
-                tag.addEventListener('click', () => {
-                    document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
-                    tag.classList.add('active');
-                    currentCategory = category.value;
-                    changeBackground();
-                });
-                
-                selector.appendChild(tag);
-            });
-        }
-        
-        // 初始化友链
-        function initFriendLinks() {
-            const container = document.getElementById('friend-links-container');
-            container.innerHTML = "";
-            
-            friendLinks.forEach((link, index) => {
-                // 为友链添加延迟动画效果
-                setTimeout(() => {
-                    const linkElement = document.createElement('a');
-                    linkElement.href = link.url;
-                    linkElement.target = "_blank";
-                    linkElement.rel = "noopener noreferrer";
-                    linkElement.className = "friend-link slide-up";
-                    
-                    // 使用提供的头像链接
-                    linkElement.innerHTML = `
-                        <img src="${link.avatar}" alt="${link.name}的头像" class="friend-avatar">
-                        <div class="friend-info">
-                            <div class="friend-name">${link.name}</div>
-                            <div class="friend-desc">${link.description}</div>
-                        </div>
-                        <i class="fa fa-arrow-right text-primary opacity-70"></i>
-                    `;
-                    
-                    container.appendChild(linkElement);
-                }, index * 100);
-            });
-        }
-        
-        function getRandomBackground(category = "") {
-            if (category === "anime") {
-                return `https://picsum.photos/seed/anime${Math.random()}/1920/1080`;
-            } else {
-                const baseUrl = "https://source.unsplash.com/random/1920x1080";
-                return category ? `${baseUrl}?${category}` : baseUrl;
-            }
-        }
-        
-        function changeBackground() {
-            const bgImage = document.querySelector('.bg-image');
-            bgImage.style.opacity = '0.4';
-            
-            const newImageUrl = getRandomBackground(currentCategory);
-            const newImg = new Image();
-            newImg.src = newImageUrl;
-            
-            newImg.onload = function() {
-                bgImage.src = newImageUrl;
-                bgImage.alt = currentCategory ? 
-                    `${bgCategories.find(c => c.value === currentCategory)?.name}背景图` : 
-                    "随机背景图";
-                setTimeout(() => {
-                    bgImage.style.opacity = '0.7';
-                }, 50);
-            }
-            
-            newImg.onerror = function() {
-                console.error('背景图加载失败，使用备用图');
-                bgImage.src = `https://picsum.photos/seed/animedefault/1920/1080`;
-                setTimeout(() => {
-                    bgImage.style.opacity = '0.7';
-                }, 50);
-            }
-        }
+window.launchFire = function(){
+    let color = `hsl(${Math.random()*360},100%,70%)`;
+    for(let i=0;i<100;i++){
+        fireArr.push(new Spark(width/2,height/3,color));
+    }
+}
 
-        document.addEventListener('DOMContentLoaded', function() {
-            initCategorySelector();
-            initFriendLinks(); // 初始化友链
-            changeBackground();
-            
-            document.getElementById('change-bg').addEventListener('click', changeBackground);
-            
-            function updateTime() {
-                const now = new Date();
-                
-                const timeDisplay = document.getElementById('time-display');
-                const hours = String(now.getHours()).padStart(2, '0');
-                const minutes = String(now.getMinutes()).padStart(2, '0');
-                const seconds = String(now.getSeconds()).padStart(2, '0');
-                timeDisplay.textContent = `${hours}:${minutes}:${seconds}`;
-                
-                const dateDisplay = document.getElementById('date-display');
-                const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
-                dateDisplay.textContent = now.toLocaleDateString('zh-CN', options);
-                
-                document.getElementById('current-year').textContent = now.getFullYear();
-            }
-            
-            updateTime();
-            setInterval(updateTime, 1000);
-            
-            function getDailyQuote() {
-                const quoteElement = document.getElementById('daily-quote');
-                const authorElement = document.getElementById('quote-author');
-                
-                quoteElement.textContent = "加载中...";
-                authorElement.textContent = "";
-                
-                fetch('https://v1.hitokoto.cn/')
-                    .then(response => response.json())
-                    .then(data => {
-                        quoteElement.style.opacity = "0";
-                        authorElement.style.opacity = "0";
-                        
-                        setTimeout(() => {
-                            quoteElement.textContent = data.hitokoto;
-                            authorElement.textContent = data.from ? `—— ${data.from}` : '';
-                            
-                            quoteElement.offsetHeight;
-                            quoteElement.style.transition = "opacity 0.5s ease";
-                            quoteElement.style.opacity = "1";
-                            
-                            authorElement.offsetHeight;
-                            authorElement.style.transition = "opacity 0.5s ease";
-                            authorElement.style.opacity = "1";
-                        }, 300);
-                    })
-                    .catch(error => {
-                        console.error('获取美句失败:', error);
-                        quoteElement.textContent = '生活就像海洋，只有意志坚强的人才能到达彼岸。';
-                        authorElement.textContent = '—— 马克思';
-                    });
-            }
-            
-            getDailyQuote();
-            
-            document.getElementById('daily-quote').addEventListener('click', function() {
-                this.style.transform = "scale(0.95)";
-                setTimeout(() => {
-                    this.style.transform = "scale(1)";
-                    getDailyQuote();
-                }, 200);
-            });
-        });
-    </script>
+function render(){
+    ctx.clearRect(0,0,width,height);
+    for(let i=fireArr.length-1;i>=0;i--){
+        fireArr[i].update();
+        fireArr[i].draw();
+        if(fireArr[i].a<=0) fireArr.splice(i,1);
+    }
+    requestAnimationFrame(render);
+}
+render();
+</script>
 </body>
 </html>
